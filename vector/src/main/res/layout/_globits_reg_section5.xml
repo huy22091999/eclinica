@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riot_primary_background_color_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/layout_horizontal_margin"
+        android:layout_marginEnd="@dimen/layout_horizontal_margin"
+        android:layout_marginBottom="@dimen/layout_vertical_margin"
+        android:orientation="vertical">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_eligible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textSize="11sp"
+            android:text="@string/eligible_paper"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/physical_exam"
+            android:textColor="@color/text_color_primary"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+
+        <im.vector.app.ext.conference.customlayout.TableLayoutEx
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginStart="-16dp"
+            android:layout_marginEnd="-16dp"
+            android:shrinkColumns="2">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    tools:ignore="RtlSymmetry"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_anamnesis"
+                    android:textSize="16sp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/anamesis"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    tools:ignore="RtlSymmetry"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_pathologicalProcess"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pathologicalProcess"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_temperature"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/temperature"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_pulse"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pulse"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_minimumBloodPressure"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/minimumBloodPressure"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_maximumBloodPressure"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/maximumBloodPressure"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/_breathing"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/breathing"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_weight"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/weight"
+                    style="@style/LayoutDetailPrisriptionRight"
+
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/_height"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/height"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_motorFunction"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/motorFunction"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_fullBodyTestResults"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fullBodyTestResults"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_parts"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/parts"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_degreeOfAdherenceTreatment"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/degreeOfAdherenceTreatment"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_sideEffectsOfMedications"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sideEffectsOfMedications"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_symptomsOfHIVInfection"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/symptomsOfHIVInfection"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_pregnancyStatus"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pregnancyStatus"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_sexuallyTransmittedDiseaseSymptoms"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sexuallyTransmittedDiseaseSymptoms"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_highRiskHIVBehaviors"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/highRiskHIVBehaviors"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LayoutDetailPrisription"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/_otherDiseases"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/otherDiseases"
+                    style="@style/LayoutDetailPrisriptionRight"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp" />
+
+            </TableRow>
+        </im.vector.app.ext.conference.customlayout.TableLayoutEx>
+
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/lab_tests"
+            android:textColor="@color/text_color_primary"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/labtest_item_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="always"
+            tools:listitem="@layout/_globits_item_labtest_result"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_testEvaluation"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/testEvaluation"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/drugs"
+            android:textColor="@color/text_color_primary"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_drugs_by_regimen"
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/drugs_by_regimen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="always"
+            tools:listitem="@layout/_globits_drug_list_item"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_drugs_other"
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/drugs_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="always"
+            tools:listitem="@layout/_globits_drug_list_item"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_summaryExamination"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/summaryExamination"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/drug_receive_type"
+            android:textColor="@color/text_color_primary"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_receivingUnitName"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/receivingUnitName"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/receiveType"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/layout_receive_type_home">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_receiveName"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/receiveName"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_receivePhoneNumber"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/receivePhoneNumber"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_receiveAddress"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/receiveAddress"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_service_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:textSize="11sp"
+        android:text="@string/service_rating"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+

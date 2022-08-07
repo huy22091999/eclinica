@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LoginLabel">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/sfprotext_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineHeight">23dp</item>
+        <item name="android:textColor">#5E606A</item>
+    </style>
+</resources>

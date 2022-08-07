@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+
+    <!--    android:background="@color/alpha_white_50"-->
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/drug_name"-->
+    <!--        style="@style/QuicksandSemiBold"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:text="Tên thuốc"-->
+    <!--        android:textColor="?riot_primary_text_color"-->
+    <!--        android:textSize="16sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        tools:ignore="HardcodedText" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/drug_code"-->
+    <!--        style="@style/QuicksandSemiBold"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Mã thuốc"-->
+    <!--        android:textColor="?riot_primary_text_color"-->
+    <!--        android:textSize="16sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        tools:ignore="HardcodedText" />-->
+
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/drug_manufacturer"-->
+    <!--        style="@style/QuicksandSemiBold"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Nhà sản xuất: "-->
+    <!--        tools:ignore="HardcodedText" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/drug_number_days"-->
+    <!--        style="@style/QuicksandSemiBold"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Số ngày dùng thuốc: "-->
+    <!--        tools:ignore="HardcodedText" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/drug_total_quantity"-->
+    <!--        style="@style/QuicksandSemiBold"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Số lượng: "-->
+    <!--        tools:ignore="HardcodedText" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/drug_number_per_day"-->
+    <!--        style="@style/QuicksandSemiBold"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Liều dùng/Ngày: "-->
+    <!--        tools:ignore="HardcodedText" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/drug_note"-->
+    <!--        style="@style/QuicksandSemiBold"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Hướng dẫn sử dụng: "-->
+    <!--        tools:ignore="HardcodedText" />-->
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginVertical="8dp"-->
+    <!--        android:background="@color/underline" />-->
+
+
+    <im.vector.app.ext.conference.customlayout.TableLayoutEx
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:weightSum="3">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="1dp"
+                android:text="Tên thuốc "
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/drug_name"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:paddingStart="10dp"
+                android:text="dfgfdgdfg"
+                android:textColor="#111111"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:weightSum="3">
+
+            <com.google.android.material.textview.MaterialTextView
+
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="1dp"
+                android:text="Mã thuốc "
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/drug_code"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:paddingStart="10dp"
+                android:paddingEnd="16dp"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:weightSum="3">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="1dp"
+                android:text="Nhà sản xuất"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/drug_manufacturer"                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:paddingStart="10dp"
+                android:paddingEnd="16dp"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="1dp"
+                android:text="Số ngày dùng thuốc"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/drug_number_days"                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:paddingStart="10dp"
+                android:paddingEnd="16dp"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="1dp"
+                android:text="Số lượng "
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/drug_total_quantity"                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:paddingStart="10dp"
+                android:paddingEnd="16dp"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="1dp"
+                android:text="Liều dùng/ Ngày "
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/drug_number_per_day"                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:paddingStart="10dp"
+                android:paddingEnd="16dp"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="1dp"
+                android:text="Hướng dẫn sử dụng"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/drug_note"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:paddingStart="10dp"
+                android:paddingEnd="16dp"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </TableRow>
+
+    </im.vector.app.ext.conference.customlayout.TableLayoutEx>
+</LinearLayout>

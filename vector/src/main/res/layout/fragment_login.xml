@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?riotx_background"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/main"
+                style="@style/LoginFormContainer"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:orientation="vertical"
+                android:paddingTop="36dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_eclinica" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/loginTitle"
+                    style="@style/LoginTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/login" />
+                <!-- end edit -->
+                <androidx.legacy.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LoginLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_phone_lable"
+                    android:textFontWeight="590" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loginFieldTil"
+                    style="@style/Vector.TextInputLayout.Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:errorEnabled="false"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_baseline_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loginField"
+                        style="@style/CommonTextInputLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="@string/login_phone_hint"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LoginLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/login_password_lable"
+                    android:textFontWeight="590" />
+
+                <FrameLayout
+                    android:id="@+id/passwordContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/passwordFieldTil"
+                        style="@style/Vector.TextInputLayout.Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        app:errorIconDrawable="@null"
+                        app:hintEnabled="false"
+                        app:startIconDrawable="@drawable/ic_baseline_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/passwordField"
+                            style="@style/CommonTextInputLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:ems="10"
+                            android:hint="@string/login_signup_password_hint"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:paddingEnd="48dp"
+                            tools:ignore="RtlSymmetry" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <im.vector.app.core.ui.views.RevealPasswordImageView
+                        android:id="@+id/passwordReveal"
+                        android:layout_width="@dimen/layout_touch_size"
+                        android:layout_height="@dimen/layout_touch_size"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="4dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:scaleType="center"
+                        app:tint="?attr/colorAccent" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            style="@style/LoginLabel2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/riot_checkbox"
+                            android:text="@string/login_save_info"
+                            android:textFontWeight="400" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/forgetPasswordButton"
+                            style="@style/LoginLabel2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|end"
+                            android:text="@string/auth_forgot_password"
+                            android:textFontWeight="400" />
+                    </LinearLayout>
+
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginSubmit"
+                        style="@style/Style.Vector.Login.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/auth_login"
+                        android:textSize="16sp"
+                        tools:enabled="false"
+                        tools:ignore="RelativeOverlap" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_vertical_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/CommonTextNewAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_not_have_account"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/loginNotice"
+                            style="@style/CommonTextNewAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/login_subtitle"
+                            android:textColor="@color/riotx_text_color_login" />
+
+                    </LinearLayout>
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/LoginLabel3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_for_support" />
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/img_phone_call" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/LoginLabel2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/business_contact" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/contact_business"
+                                style="@style/LoginLabel2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="@string/business_contact_phone" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/img_phone_call" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/LoginLabel2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/technical_contact" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/contact_technical"
+                                style="@style/LoginLabel2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="@string/technical_contact_phone" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/loginPrivacy"
+                    style="@style/LoginLabel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center|bottom"
+                    android:text="@string/help_by_us" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
+

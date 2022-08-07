@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The android:opacity=”opaque” line — this is critical in preventing a flash of black as your theme transitions. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+
+    <!-- Centered logo -->
+    <item android:top="16dp"
+        android:start="16dp"
+        android:end="16dp"
+        android:bottom="16dp" android:drawable="@drawable/img_eclinica" android:gravity="center"/>
+
+
+
+</layer-list>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:background="@color/riot_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/layout_horizontal_margin"
+        android:layout_marginEnd="@dimen/layout_horizontal_margin"
+
+        android:layout_marginBottom="@dimen/layout_vertical_margin"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/CommonTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:text="@string/instructions"
+            android:textColor="@color/text_color_primary_title"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/CommonText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:drawableStart="@drawable/ic_asterisk"
+            android:drawableTint="@color/vector_warning_color"
+            android:lineHeight="23dp"
+            android:text="@string/instruction_upload_files_for_profile_edit"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/uploadfile1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giấy tờ tùy thân"
+                    tools:ignore="HardcodedText" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/_bg_6">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btnupload1"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/_bg_6" />
+
+                    <ImageView
+                        android:id="@+id/iconupload1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:src="@drawable/icon_upload"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_uploadfile1"
+                        style="@style/CommonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/layout_horizontal_margin"
+                        android:layout_marginTop="50dp"
+
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/indentity_documents"
+                        android:textColor="#2557E4"
+                        tools:ignore="HardcodedText" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uploadfile2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mặt trước CMND"
+                    tools:ignore="HardcodedText" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/_bg_6">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btnupload2"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/_bg_6" />
+
+                    <ImageView
+                        android:id="@+id/iconupload2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_upload"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_uploadfile2"
+                        style="@style/CommonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/layout_horizontal_margin"
+                        android:layout_marginTop="50dp"
+
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/idcart_front"
+                        android:textColor="#2557E4"
+                        tools:ignore="HardcodedText" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/uploadfile3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mặt sau CMND"
+                    tools:ignore="HardcodedText" />
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/_bg_6">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btnupload3"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/_bg_6" />
+
+                    <ImageView
+                        android:id="@+id/iconupload3"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_upload"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_uploadfile3"
+                        style="@style/CommonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/layout_horizontal_margin"
+                        android:layout_marginTop="50dp"
+
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/idcart_back"
+                        android:textColor="#2557E4"
+                        tools:ignore="HardcodedText" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uploadfile4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chữ ký"
+                    tools:ignore="HardcodedText" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/_bg_6">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btnupload4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/_bg_6" />
+
+                    <ImageView
+                        android:id="@+id/iconupload4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_upload"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_uploadfile4"
+                        style="@style/CommonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/layout_horizontal_margin"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/hand_sign"
+                        android:textColor="#2557E4"
+                        tools:ignore="HardcodedText" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

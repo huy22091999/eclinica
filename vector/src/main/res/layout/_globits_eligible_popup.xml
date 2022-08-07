@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/layout_horizontal_margin"
+        android:layout_marginEnd="@dimen/layout_horizontal_margin"
+        android:layout_marginBottom="@dimen/layout_vertical_margin">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_semi_bold"
+            android:text="@string/eligible_paper"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textColor="?riot_primary_text_color"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text="Bằng việc ký tên dưới đây, tôi khẳng định rằng tôi đã trao đổi với Nhân viên y tế/Bác sĩ và hiểu rõ về những lợi ích và rủi ro có thể có của việc sử dụng PrEP để giảm nguy cơ lây nhiễm HIV."
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text="Đặc biệt tôi cam kết thực hiện các việc sau khi được nhân viên y tế trao đổi:"
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text=" - Tôi đồng ý sẽ thực hiện xét nghiệm HIV ít nhất 3 tháng một lần theo lịch hẹn của nhân viên y tế;"
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text=" - Tôi hiểu một số tác dụng phụ có thể gặp khi sử dụng PrEP (ví dụ như: buồn nôn, đau bụng, đau đầu, …) và tôi sẽ liên hệ với nhân viên y tế ngay nếu có tác dụng phụ xảy ra với tôi khi dùng thuốc PrEP;"
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text=" - Tôi hiểu rằng vẫn có thể có nguy cơ nhiễm HIV và các bệnh lây truyền qua đường tình dục trong khi sử dụng PrEP;"
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text=" - Tôi sẽ thực hành an toàn tình dục bằng việc sử dụng bao cao su đúng cách; không sử dụng bơm kim tiêm chung trong tiêm chích;"
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text=" - Tôi sẽ uống thuốc PrEP và tuân thủ sử dụng thuốc theo đúng hướng dẫn của nhân viên y tế;"
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text=" - Tôi sẽ hỏi nhân viên y tế nếu tôi có bất cứ băn khoăn hay câu hỏi nào."
+            android:textColor="?riot_primary_text_color"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:lineHeight="23dp"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/agree_eligible_paper"
+                android:padding="10dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_destructive_disabled_text_color"
+                android:layout_marginHorizontal="12dp"
+                android:layout_gravity="center"
+                android:text="@string/action_close"
+                android:padding="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

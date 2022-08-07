@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/group_1">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_outline_dashboard_24"
+            android:title="@string/dashboard"
+            tools:ignore="HardcodedText" />
+    </group>
+
+    <item
+        android:title="@string/business_functions"
+        tools:ignore="HardcodedText">
+        <menu>
+            <group
+                android:id="@+id/group_2"
+                android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_appointments"
+                    android:icon="@drawable/ic_calendar"
+                    android:title="@string/appointments" />
+                <item
+                    android:id="@+id/nav_lab_tests"
+                    android:icon="@drawable/ic_flask"
+                    android:title="@string/lab_tests" />
+                <item
+                    android:id="@+id/nav_drug_prescriptions"
+                    android:icon="@drawable/ic_medicines"
+                    android:title="@string/drug_prescriptions" />
+                <item
+                    android:id="@+id/nav_personal_profile"
+                    android:icon="@drawable/ic_outline_account_circle_24"
+                    android:title="@string/personal_profile" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:title="@string/drawer_menu_system"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_outline_graphic_eq_24"
+                android:title="@string/settings" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_signout_18dp"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+</menu>

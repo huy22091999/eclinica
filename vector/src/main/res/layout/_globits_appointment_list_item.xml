@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/layout_vertical_margin"
+    android:layout_marginBottom="@dimen/layout_vertical_margin"
+    android:background="@drawable/_rounded_8_background_4">
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/group_title"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="28dp"-->
+    <!--        android:background="@drawable/_rounded_8_background_3"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:layout_width="16dp"-->
+    <!--            android:layout_height="16dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:src="@drawable/ic_layers"-->
+    <!--            app:tint="@color/secondary_color" />-->
+
+    <!--        <com.google.android.material.textview.MaterialTextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:gravity="end"-->
+    <!--            android:text="đợt điều trị 1"-->
+    <!--            android:textSize="15sp"-->
+    <!--            tools:ignore="HardcodedText" />-->
+
+    <!--    </LinearLayout>-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello world"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello world"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

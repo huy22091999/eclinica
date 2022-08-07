@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--        <im.vector.app.ext.custom.ScrollableTabLayout-->
+    <!--            android:id="@+id/tab_layout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:elevation="4dp"-->
+    <!--            app:layout_scrollFlags="scroll|enterAlways"-->
+    <!--            app:tabMode="scrollable" />-->
+
+
+    <!-- Note: A org.jitsi.meet.sdk.JitsiMeetView will be added here and so add tools:ignore="UselessParent" -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3366FF"
+        android:elevation="0dp"
+        app:layout_scrollFlags="scroll|enterAlways" >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Vector.Toolbar.Title"
+            android:textColor="@color/white"
+            android:id="@+id/toolbar_title"/>
+
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:id="@+id/jitsi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:id="@+id/jitsi_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminate="true" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+       >
+    </androidx.fragment.app.FragmentContainerView>
+
+</LinearLayout>

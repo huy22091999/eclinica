@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riot_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/layout_horizontal_margin"
+        android:layout_marginEnd="@dimen/layout_horizontal_margin"
+        android:layout_marginBottom="@dimen/layout_vertical_margin"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:fontFamily="@font/svn_poppins_semi_bold"
+            android:justificationMode="inter_word"
+            android:text="@string/thanks_for_using_service"
+            android:textColor="#2656E5"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText,UnusedAttribute" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/QuicksandRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:justificationMode="inter_word"
+            android:text="@string/instruction_service_rating"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:layout_marginBottom="4dp"
+            tools:ignore="HardcodedText,UnusedAttribute" />
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_type1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"
+                android:text="@string/rate_type2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_type3"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_out_line" />
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandRegular"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_type4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_star_full" />
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandRegular"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_type5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question1"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ1"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="1"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question2"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ2"
+                    style="@style/RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question3"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ3"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question4"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ4"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question5"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ5"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question6"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ6"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question7"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ7"
+                    style="@style/RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:layout_marginTop="16dp"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question8"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/serviceRatingQ8"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+
+                    android:text="@string/service_type_question9"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    style="@style/RatingBar"
+                    android:id="@+id/serviceRatingQ9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:layout_marginTop="16dp"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+                    android:text="@string/service_type_question10"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    style="@style/RatingBar"
+                    android:id="@+id/serviceRatingQ10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:layout_marginTop="16dp"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_custom_item_labtest_result"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/svn_poppins_medium"
+
+                    android:text="@string/service_type_question11"
+                    android:textColor=" #14142B"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    style="@style/RatingBar"
+                    android:id="@+id/serviceRatingQ11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:layout_marginTop="16dp"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+

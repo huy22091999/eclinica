@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_horizontal_margin"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/instructions"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/instruction_complete_prep_screening"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textone"
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="@string/client_type"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RadioGroup
+                    android:id="@+id/client_type_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/ctype_walkin"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_type_walkin" />
+
+                    <RadioButton
+                        android:id="@+id/ctype_facility_refer"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_type_facility_refer" />
+
+                    <RadioButton
+                        android:id="@+id/ctype_cbo_refer"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_type_cbo_refer" />
+
+                    <RadioButton
+                        android:id="@+id/ctype_other"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other" />
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/source_detail_til"
+                    style="@style/Vector.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    tools:hint="@string/please_specify"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/source_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="@string/screen_question_1"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_1_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_1_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_male" />
+
+                <RadioButton
+                    android:id="@+id/question_1_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_female" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="@string/screen_question_2"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_2_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_2_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_male" />
+
+                <RadioButton
+                    android:id="@+id/question_2_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_female" />
+
+                <RadioButton
+                    android:id="@+id/question_2_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_trans_male" />
+
+                <RadioButton
+                    android:id="@+id/question_2_ans_4"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_trans_female" />
+
+                <RadioButton
+                    android:id="@+id/question_2_ans_5"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="@string/screen_question_3"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_3_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_3_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_male_only" />
+
+                <RadioButton
+                    android:id="@+id/question_3_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_female_only" />
+
+                <RadioButton
+                    android:id="@+id/question_3_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_both_male_female" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/QuicksandSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:layout_marginEnd="@dimen/layout_horizontal_margin"
+            android:background="@color/riotx_accent"
+            android:padding="@dimen/layout_vertical_margin"
+            android:text="@string/in_the_last_3_days"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_horizontal_margin"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="3.1. Bạn có QHTD không dùng BCS với người có HIV chưa điều trị hoặc với người chưa rõ tình trạng nhiễm HIV không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_3_1_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_3_1_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no" />
+
+                <RadioButton
+                    android:id="@+id/question_3_1_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="3.2. Bạn có dùng chung dụng cụ tiêm chích với người có HIV hoặc với người chưa rõ tình trạng nhiễm HIV không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_3_2_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_3_2_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no" />
+
+                <RadioButton
+                    android:id="@+id/question_3_2_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/QuicksandSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:layout_marginEnd="@dimen/layout_horizontal_margin"
+            android:background="@color/riotx_accent"
+            android:padding="@dimen/layout_vertical_margin"
+            android:text="@string/in_the_last_2_weeks"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_horizontal_margin"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="4. Bạn có các triệu chứng giống như cảm cúm, viêm họng, vã mồ hôi, sưng hạch, loét miệng, đau đầu hay dị ứng không? Và nếu có, bạn có QHTD không dùng BCS hoặc có dùng chung dụng cụ tiêm chích với người nhiễm HIV hoặc người không rõ tình trạng nhiễm HIV trong 2 đến 4 tuần qua không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_4_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_4_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no" />
+
+                <RadioButton
+                    android:id="@+id/question_4_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/QuicksandSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:layout_marginEnd="@dimen/layout_horizontal_margin"
+            android:background="@color/riotx_accent"
+            android:padding="@dimen/layout_vertical_margin"
+            android:text="@string/sexual_partner_information"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_horizontal_margin"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="5. Bạn có vợ/chồng, bạn tình là người nhiễm HIV không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_5_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_5_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no" />
+
+                <RadioButton
+                    android:id="@+id/question_5_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes" />
+
+                <RadioButton
+                    android:id="@+id/question_5_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_1" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/question5_details_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:background="@drawable/_question_title_bg"
+                    android:padding="16dp"
+                    android:text="5.1. Anh ấy/cô ấy có đang điều trị ARV không?"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/question_5_1_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/_question_options_bg"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/question_5_1_ans_1"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_no" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_1_ans_2"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_yes" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_1_ans_3"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_unknown_1" />
+                </RadioGroup>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:background="@drawable/_question_title_bg"
+                    android:padding="16dp"
+                    android:text="5.2. Anh ấy/cô ấy có uống thuốc hàng ngày không?"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/question_5_2_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/_question_options_bg"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/question_5_2_ans_1"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_no" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_2_ans_2"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_yes" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_2_ans_3"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_unknown_1" />
+                </RadioGroup>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:background="@drawable/_question_title_bg"
+                    android:padding="16dp"
+                    android:text="5.3. Anh ấy/cô ấy có kết quả TLVR gần nhất &lt;200 bản sao/ml không?"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/question_5_3_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/_question_options_bg"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/question_5_3_ans_1"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_no" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_3_ans_2"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_yes" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_3_ans_3"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_unknown_1" />
+                </RadioGroup>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:background="@drawable/_question_title_bg"
+                    android:padding="16dp"
+                    android:text="5.4. Các bạn có dùng BCS trong tất cả các lần QHTD không?"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/question_5_4_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/_question_options_bg"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/question_5_4_ans_1"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_no" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_4_ans_2"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_yes" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_4_ans_3"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_unknown_2" />
+                </RadioGroup>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:background="@drawable/_question_title_bg"
+                    android:padding="16dp"
+                    android:text="5.5. Sắp tới các bạn có kế hoạch có con không?"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/question_5_5_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/_question_options_bg"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/question_5_5_ans_1"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_no" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_5_ans_2"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_yes" />
+
+                    <RadioButton
+                        android:id="@+id/question_5_5_ans_3"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_unknown_2" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/QuicksandSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:layout_marginEnd="@dimen/layout_horizontal_margin"
+            android:background="@color/riotx_accent"
+            android:padding="@dimen/layout_vertical_margin"
+            android:text="@string/in_the_last_6_months"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_horizontal_margin"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="6. Bạn có QHTD với bao nhiêu người?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_6_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_6_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_6_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=">=2"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_6_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_2" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/question6_details_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:background="@drawable/_question_title_bg"
+                    android:padding="16dp"
+                    android:text="6.1. Bạn có dùng BCS ở tất cả các lần QHTD không?"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/question_6_1_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/_question_options_bg"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/question_6_1_ans_1"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_no"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/question_6_1_ans_2"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_yes"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/question_6_1_ans_3"
+                        style="@style/QuicksandRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/answer_unknown_2" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="7. Bạn có QHTD để đổi lấy tiền hoặc hiện vật không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_7_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_7_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_7_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_7_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_2" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="8. Bạn có tiền sử mắc hoặc điều trị các bệnh liên quan đường tình dục như lậu, giang mai, chlamydia không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_8_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_8_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_8_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_8_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_1" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="9. Bạn có QHTD không dùng BCS với người có nguy cơ cao nhiễm HIV (ví dụ người TCTM, người có QHTD đồng giới nam, người có QHTD vì tiền/hiện vật, người có nhiều bạn tình) hay không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_9_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_9_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_9_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_9_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_1" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="10. Bạn có dùng chung dụng cụ tiêm chích với người khác không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_10_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_10_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_10_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_10_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_1" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="11. Bạn đã từng dùng thuốc dự phòng sau phơi nhiễm chưa?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_11_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_11_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_11_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_11_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_1" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:background="@drawable/_question_title_bg"
+                android:padding="16dp"
+                android:text="12. Theo bạn, bạn có cần sử dụng PrEP không?"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/question_12_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/_question_options_bg"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/question_12_ans_1"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_no"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_12_ans_2"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_yes"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/question_12_ans_3"
+                    style="@style/QuicksandRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_unknown_1" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/QuicksandSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:layout_marginEnd="@dimen/layout_horizontal_margin"
+            android:background="@drawable/_question_title_bg"
+            android:padding="@dimen/layout_vertical_margin"
+            android:text="@string/risk_group_selection"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_horizontal_margin"
+            android:layout_marginRight="@dimen/layout_horizontal_margin"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/_question_options_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_msm"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/risk_msm"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_transgender_female"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/gender_trans_female"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_transgender_male"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/gender_trans_male"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_multi_partners"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/risk_multi_partners"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_pwid"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/risk_pwid"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_sex_worker"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/risk_sex_worker"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_partner_plhiv"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/risk_partner_plhiv"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_prep_required"
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/risk_prep_required"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

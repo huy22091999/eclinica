@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?riotx_header_panel_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/_home_screen_bg"
+            android:orientation="vertical">
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/_button_bgbotton_client_start_service"
+                android:orientation="vertical"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="12dp"
+                        android:src="@drawable/img_notification_base"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CommonTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/next_schedule"
+                        android:textSize="20sp"
+                        android:textColor="@color/eclinica_text_color_black"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/step_message"
+                    style="@style/CommonText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_sample"
+                    android:minLines="2" />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/riot_green_eclinica"
+                    android:textAllCaps="false"
+                    android:background="@drawable/eclinica_background_btn_home"
+                    android:text="@string/samle_btn"/>
+
+            </LinearLayout>
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <LinearLayout
+                android:id="@+id/btn_signup_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/_button_bgbotton_client_start_service"
+                android:orientation="vertical"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="12dp"
+                        android:src="@drawable/img_remind"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CommonTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/remind_title"
+                        android:textSize="20sp"
+                        android:textColor="@color/eclinica_text_color_black"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/remind_message"
+                    style="@style/CommonText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_remind"
+                    android:textColor="@color/eclinica_text_color_gray" android:minLines="2" />
+                <RelativeLayout
+                    android:layout_marginTop="24dp"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/eclinica_background_remind_home"
+                    android:text="@string/samle_btn"
+                    >
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/medicine_name"
+                        style="@style/CommonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Abacavir (ABC)"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@color/riot_green_eclinica"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/CommonText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/icon_medicine"
+                        android:layout_toEndOf="@+id/medicine_name"
+                        android:gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:text="Sáng  150mg"
+                        android:textColor="@color/riot_green_eclinica"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/icon_medicine"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/img_check" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/eclinica_background_remind_home"
+                    android:text="@string/samle_btn"
+                    >
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/medicine_name2"
+                        style="@style/CommonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:text="Abacavir (ABC)"
+                        android:textColor="@color/riot_green_eclinica"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/CommonText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/icon_medicine2"
+                        android:layout_toEndOf="@+id/medicine_name2"
+                        android:gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:text="Sáng  150mg"
+                        android:textColor="@color/riot_green_eclinica"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/icon_medicine2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/img_check" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:clipChildren="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btn_appointment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_button_bg_landing_menu_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="16dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/graph_health"
+                        android:lines="2"
+                        android:textSize="16sp" />
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appointment_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/img_heath_grapth" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/btn_encounter_labtest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_button_bg_landing_menu_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="16dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/result_examination_labtest"
+                        android:lines="2"
+                        android:textSize="16sp" />
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/lab_test_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/img_labtest" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:clipChildren="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btn_prescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_button_bg_landing_menu_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="16dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/treatment"
+                        android:lines="2"
+                        android:textSize="16sp" />
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/drug_prescription_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/img_treatment" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/btn_personal_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_button_bg_landing_menu_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="16dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile"
+                        android:lines="2"
+                        android:textSize="16sp" />
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/profile_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/img_profile" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:clipChildren="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/btn_medical_examination"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_button_bg_landing_menu_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="16dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eximation_book"
+                        android:lines="2"
+                        android:textSize="16sp" />
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/hepl_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/img_examination_book" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/btn_video_call"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_button_bg_landing_menu_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="16dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/graph_health"
+                        android:lines="2"
+                        android:textSize="16sp" />
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/video_call_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/img_move_examination" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="52dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:clipChildren="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/btn_hepl_online"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_background_btn_home_help"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="14dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="14dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/help_online_icon"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_chat" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lable1"
+                        style="@style/LoginLabel2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_toStartOf="@id/icon1"
+                        android:layout_toEndOf="@id/help_online_icon"
+                        android:fontFamily="@font/sfprotext_semibold"
+                        android:lines="1"
+                        android:text="@string/help_online"
+                        android:textColor="@color/eclinica_text_color_black" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="12dp"
+                        android:id="@+id/icon1"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_billing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/_background_btn_home_help"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="14dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="14dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/billing_icon"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_video" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lable"
+                        style="@style/LoginLabel2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_toStartOf="@id/icon"
+                        android:layout_toEndOf="@id/billing_icon"
+                        android:fontFamily="@font/sfprotext_semibold"
+                        android:lines="1"
+                        android:text="@string/video_call"
+                        android:textColor="@color/eclinica_text_color_black" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="12dp"
+                        android:id="@+id/icon"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/loginPrivacy"
+                style="@style/LoginLabel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center|bottom"
+                android:text="@string/help_by_us" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

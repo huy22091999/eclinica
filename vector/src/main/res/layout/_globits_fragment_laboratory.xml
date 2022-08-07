@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:background="@color/riot_background"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+            <View
+                android:id="@+id/upcoming_apps_box_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="@color/riotx_accent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/upcoming_apps_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:background="@drawable/_rounded_8_background_2"
+                android:elevation="6dp"
+                android:paddingBottom="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/upcoming_calendar_title"
+                    style="@style/QuicksandBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_vertical_margin"
+                    android:text="@string/labtest_recent"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/separator_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                    android:background="@color/list_divider_color_light"
+                    app:layout_constraintTop_toBottomOf="@id/upcoming_calendar_title" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/no_appointment_calendar"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/ic_flask"
+                    android:tint="@color/list_divider_color_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/separator_1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/no_tests_yet"
+                    style="@style/QuicksandMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:gravity="center"
+                    android:text="@string/no_labtest_yet"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/no_appointment_calendar"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lab_history_title_has_result"
+                style="@style/LabelLaboratory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:text="@string/labtest_list_no_result"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upcoming_apps_box" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="16dp"
+                android:id="@+id/recycler_view_labtest_has_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:clipChildren="false"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lab_history_title_has_result"
+                tools:listitem="@layout/_globits_labtest_order_list_item" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lab_history_title_no_result"
+                style="@style/LabelLaboratory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:text="@string/labtest_list_has_result"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_labtest_has_result" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:id="@+id/recycler_view_labtest_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_horizontal_margin"
+                android:layout_marginEnd="@dimen/layout_horizontal_margin"
+                android:clipChildren="false"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lab_history_title_no_result"
+                tools:listitem="@layout/_globits_labtest_order_list_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/riot_background"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            android:layout_marginEnd="@dimen/layout_horizontal_margin"
+            android:layout_marginBottom="@dimen/layout_vertical_margin"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày yêu cầu XN:"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingEnd="8dp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/labtest_request_date"
+                    style="@style/QuicksandSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?riot_primary_text_color"
+                    android:textSize="16sp"
+                    android:paddingStart="8dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlSymmetry"
+                    android:background="@drawable/background_day_labtest"/>
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:text="@string/labtest_list"
+                android:textColor="@color/text_color_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/labtest_item_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="always"
+                tools:listitem="@layout/_globits_item_labtest_result" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/instructions"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandRegular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:text="@string/instruction_upload_files_for_labtest_result"
+                android:textSize="16sp"
+                android:textColor="?riot_primary_text_color"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/upload_labtest_file"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/_button_bg_4"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/layout_vertical_margin">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_room_profile_uploads"
+                    app:tint="@color/riotx_accent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/QuicksandMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    android:text="@string/select_files_to_upload"
+                    android:textColor="@color/riotx_accent" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/QuicksandSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:text="@string/labtest_files_list"
+                android:textColor="?riot_primary_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/labtest_files_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="always"
+                tools:listitem="@layout/_globits_labtest_file" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

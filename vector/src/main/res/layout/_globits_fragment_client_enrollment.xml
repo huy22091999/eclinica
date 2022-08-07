@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?riotx_background"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/LoginFormContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="14dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/TelePrEP"
+                    android:textAppearance="@style/TextAppearance.Vector.Login.Title2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/registerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginBottom="32dp"
+                    android:text="@string/auth_register_text"
+                    android:textAppearance="@style/TextAppearance.Vector.Login.Title2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/registerError"
+                    style="@style/QuicksandMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/duplicate_username"
+                    android:textAppearance="@style/TextAppearance.Vector.Login.Text"
+                    android:textColor="@color/vector_warning_color"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fullname_til"
+                    style="@style/Vector.TextInputLayout.Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/fullname"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fullname"
+                        style="@style/CommonTextInputLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/service_type_til"
+                    style="@style/Vector.DropDownLayout.Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:hint="@string/service_type"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true">
+
+                    <im.vector.app.ext.custom.ExposedDropdownMenu
+                        android:id="@+id/service_type"
+                        style="@style/CommonTextInputLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username_til"
+                    style="@style/Vector.TextInputLayout.Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:hint="@string/login_signin_username_hint"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/username"
+                        style="@style/CommonTextInputLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_address_til"
+                    style="@style/Vector.TextInputLayout.Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:hint="@string/email_address"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_address"
+                        style="@style/CommonTextInputLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textWebEmailAddress"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <FrameLayout
+                    android:id="@+id/passwordContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_vertical_margin">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/password_til"
+                        style="@style/Vector.TextInputLayout.Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/login_signup_password_hint"
+                        app:errorEnabled="true"
+                        app:errorIconDrawable="@null"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password"
+                            style="@style/CommonTextInputLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:lines="1" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <im.vector.app.core.ui.views.RevealPasswordImageView
+                        android:id="@+id/password_reveal"
+                        android:layout_width="@dimen/layout_touch_size"
+                        android:layout_height="@dimen/layout_touch_size"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="4dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:scaleType="center"
+                        app:tint="@color/text_color_primary" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/repeat_password_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_vertical_margin">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/repeat_password_til"
+                        style="@style/Vector.TextInputLayout.Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/auth_repeat_password_placeholder"
+                        app:errorEnabled="true"
+                        app:errorIconDrawable="@null"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/repeat_password"
+                            style="@style/CommonTextInputLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:lines="1"
+                            android:paddingEnd="48dp"
+                            tools:ignore="RtlSymmetry" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <im.vector.app.core.ui.views.RevealPasswordImageView
+                        android:id="@+id/repeat_password_reveal"
+                        android:layout_width="@dimen/layout_touch_size"
+                        android:layout_height="@dimen/layout_touch_size"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="4dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:scaleType="center"
+                        app:tint="?attr/colorAccent" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:buttonTint="@color/riotx_accent"
+                        android:id="@+id/cb_accept_rule"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtread"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="2dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/riotx_text_color"
+                        android:text="@string/have_read" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btn_getpolicies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/rule"
+                        android:textColor="@color/riotx_text_color_login" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_vertical_margin"
+                    android:orientation="vertical">
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_register"
+                        style="@style/Style.Vector.Login.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:enabled="false"
+                        android:text="@string/auth_register_text"
+                        tools:ignore="RelativeOverlap" />
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/CommonText"
+                            android:textColor="@color/riotx_text_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/have_account" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/registerSubtitle"
+                            style="@style/CommonTextNewAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:fontFamily="@font/svn_poppins_semi_bold"
+                            android:text="@string/login_here"
+                            android:textColor="@color/riotx_text_color_login" />
+
+                    </LinearLayout>
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CommonTextNewAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineHeight="23dp"
+                        android:textStyle="normal"
+                        android:text="@string/notice_register"
+                        android:textColor="@color/gray"
+                        tools:targetApi="p" />
+
+                    <!--                <androidx.appcompat.widget.AppCompatTextView-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:fontFamily="@font/quicksand_bold"-->
+                    <!--                    android:text="@string/contact_for_support"-->
+                    <!--                    android:textColor="?riot_primary_text_color"-->
+                    <!--                    android:textSize="16sp" />-->
+
+                    <!--                <androidx.legacy.widget.Space-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="16dp" />-->
+
+                    <!--                <androidx.appcompat.widget.LinearLayoutCompat-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:orientation="horizontal">-->
+
+                    <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+                    <!--                        android:layout_width="24dp"-->
+                    <!--                        android:layout_height="24dp"-->
+                    <!--                        android:src="@drawable/ic_phone_call"-->
+                    <!--                        android:tint="@color/secondary_color" />-->
+
+                    <!--                    <com.google.android.material.textview.MaterialTextView-->
+                    <!--                        android:id="@+id/contact_business"-->
+                    <!--                        style="@style/QuicksandMedium"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="8dp"-->
+                    <!--                        android:background="@drawable/_button_bg_2"-->
+                    <!--                        android:clickable="true"-->
+                    <!--                        android:focusable="true"-->
+                    <!--                        android:text="@string/business_contact_phone"-->
+                    <!--                        android:textSize="14sp" />-->
+
+                    <!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                    <!--                <androidx.appcompat.widget.LinearLayoutCompat-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginTop="8dp"-->
+                    <!--                    android:orientation="horizontal">-->
+
+                    <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+                    <!--                        android:layout_width="24dp"-->
+                    <!--                        android:layout_height="24dp"-->
+                    <!--                        android:src="@drawable/ic_phone_call"-->
+                    <!--                        android:tint="@color/secondary_color" />-->
+
+                    <!--                    <com.google.android.material.textview.MaterialTextView-->
+                    <!--                        android:id="@+id/contact_technical"-->
+                    <!--                        style="@style/QuicksandMedium"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="8dp"-->
+                    <!--                        android:background="@drawable/_button_bg_2"-->
+                    <!--                        android:clickable="true"-->
+                    <!--                        android:focusable="true"-->
+                    <!--                        android:text="@string/technical_contact_phone"-->
+                    <!--                        android:textSize="14sp" />-->
+
+                    <!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                    <!--                <com.google.android.material.textview.MaterialTextView-->
+                    <!--                    style="@style/QuicksandRegular"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginTop="36dp"-->
+                    <!--                    android:layout_marginBottom="36dp"-->
+                    <!--                    android:gravity="center"-->
+                    <!--                    android:text="@string/copyright_footer"-->
+                    <!--                    android:textSize="14sp" />-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/line_login" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/loginPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:text="@string/copyright_teleprep"
+                android:textAppearance="@style/TextAppearance.Vector.Login.Text"
+                android:textColor="#777777"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    <include-->
+    <!--        android:id="@+id/waiting_view"-->
+    <!--        layout="@layout/merge_overlay_waiting_view" />-->
+
+</FrameLayout>

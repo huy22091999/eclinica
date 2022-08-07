@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?riotx_header_panel_background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_vertical_margin"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/layout_horizontal_margin"
+        android:paddingEnd="@dimen/layout_horizontal_margin">
+        <RelativeLayout
+            android:id="@+id/btn_profile_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/btn_profile_information_til"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-40dp"
+                android:layout_toEndOf="@id/image1"
+                android:background="@drawable/_button_bg_3"
+                android:paddingStart="40dp"
+                android:focusable="true"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/general_info_button_title"
+                    style="@style/CommonTextRegistrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/profile_information_title"
+                    android:textColor="@color/riotx_accent_text_active" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/general_info_button_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/profile_information_subtitle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image1"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+
+                android:background="@drawable/circular_bordered_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/general_info_button_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    android:src="@drawable/ic_user_1" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon1"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/vecter_line"/>
+<!--        2   -->
+        <RelativeLayout
+            android:id="@+id/btn_prep_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/btn_prep_registration_til"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/_button_bg_3"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/prep_reg_button_title"
+                    style="@style/CommonTextRegistrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/prep_registration_title"
+                    android:textColor="@color/riotx_accent_text_active" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/prep_reg_button_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/prep_registration_subtitle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image2"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/circular_bordered_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/prep_reg_button_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    android:src="@drawable/ic_notes_1" />
+            </RelativeLayout>
+        </RelativeLayout>
+<!--        3-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon2"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/vecter_line"/>
+        <RelativeLayout
+            android:id="@+id/btn_select_labtests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/btn_select_labtests_til"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/_button_bg_3"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/labtest_button_title"
+                    style="@style/CommonTextRegistrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/complete_lab_tests_title"
+                    android:textColor="@color/riotx_accent_text_active" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labtest_button_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/complete_lab_tests_subtitle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image3"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/circular_bordered_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/labtest_button_icon"
+                    android:src="@drawable/ic_virus_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+<!--        4-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon3"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/vecter_line"/>
+        <RelativeLayout
+            android:id="@+id/btn_update_labresults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/btn_update_labresults_til"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/_button_bg_3"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/update_labresults_button_title"
+                    style="@style/CommonTextRegistrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/labtest_result"
+                    android:textColor="@color/riotx_accent_text_active" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/update_labresults_button_title"
+                    android:text="@string/update_labtest_results_subtitle"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image4"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/circular_bordered_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/labresult_button_icon"
+                    android:src="@drawable/ic_microscope_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+<!--5-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon4"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/vecter_line"/>
+        <RelativeLayout
+            android:id="@+id/btn_make_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/btn_make_appointment_til"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/_button_bg_3"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/appointment_button_title"
+                    style="@style/CommonTextRegistrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/make_appointment_title"
+                    android:textColor="@color/riotx_accent_text_active" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appointment_button_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/join_appointment" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image5"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/circular_bordered_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appointment_button_icon"
+                    android:src="@drawable/ic_calendar_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon5"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/vecter_line"/>
+        <RelativeLayout
+            android:id="@+id/btn_join_conference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/btn_join_conference_til"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/_button_bg_3"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/join_conference_button_title"
+                    style="@style/CommonTextRegistrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/join_appointment"
+                    android:textColor="@color/riotx_accent_text_active" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/join_conference_button_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/make_appointment_subtitle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image6"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/circular_bordered_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appointment_button_icon1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    android:src="@drawable/ic_join_conference_1" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon6"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/vecter_line_disable"/>
+        <RelativeLayout
+            android:id="@+id/btn_medical_examination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/btn_medical_examination_til"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/_button_bg_3"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/medical_examination_button_title"
+                    style="@style/CommonTextRegistrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/view_medical_examination"
+                    android:textColor="@color/riotx_accent_text_active" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/medical_examination_button_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/view_medical_examination" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image7"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/circular_bordered_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appointment_button_icon2"
+                    android:src="@drawable/ic_medical_examination_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/layout_horizontal_margin"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

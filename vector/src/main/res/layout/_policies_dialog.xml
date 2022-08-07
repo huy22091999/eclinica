@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="450dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+    <androidx.appcompat.widget.Toolbar
+        app:titleMarginStart="50dp"
+        android:id="@+id/dialog_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:titleTextColor="@color/text_color_primary"></androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:padding="10dp"
+        android:background="#fbfcfe">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/fullname" />
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <Button
+        android:layout_marginStart="80dp"
+        android:id="@+id/dialog_ok_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F44336"
+        android:clickable="true"
+        android:text="Đóng"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText" />
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/btnHolderLL"-->
+    <!--        android:background="#ffff"-->
+    <!--        android:layout_width="fill_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        >-->
+    <!--       -->
+    <!--    </LinearLayout>-->
+
+
+</LinearLayout>

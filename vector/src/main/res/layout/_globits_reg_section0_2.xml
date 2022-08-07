@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/riot_background"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_horizontal_margin"
+            android:paddingTop="0dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_vertical_margin"
+                android:layout_marginBottom="8dp"
+                android:text="@string/fullname" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullname_til"
+                style="@style/Vector.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullname"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fullname"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/dob" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dob_til"
+                style="@style/Vector.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:placeholderText="dd/mm/yyyy"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dob"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--        <FrameLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content">-->
+
+            <!--                    <com.google.android.material.textfield.TextInputLayout-->
+            <!--                        android:id="@+id/dob_til"-->
+            <!--                        style="@style/Vector.TextInputLayout"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        app:placeholderText="dd/mm/yyyy"-->
+            <!--                        app:hintEnabled="false">-->
+            <!--                        <com.google.android.material.textfield.TextInputEditText-->
+            <!--                            android:id="@+id/dob"-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:imeOptions="actionNext"-->
+            <!--                            android:inputType="date"-->
+            <!--                            android:lines="1"-->
+            <!--                            android:hint="@string/dob"-->
+            <!--                            style="@style/CommonTextInput"/>-->
+
+            <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+            <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                        android:id="@+id/imgdate"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="fill_parent"-->
+            <!--                        android:layout_gravity="end"-->
+            <!--                        android:src="@drawable/ic_calendar"-->
+            <!--                        android:layout_marginEnd="10dp"-->
+            <!--                        />-->
+
+            <!--        </FrameLayout>-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/gender" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/gender_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/gender"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/gender"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_pregnant"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/pregnant"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/profession" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/occupation_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/occupation"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profession"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/ethnic" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ethnic_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/ethnic"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ethnic"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/national_id_number" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/national_id_til"
+                style="@style/Vector.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/national_id"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/national_id_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/email_address" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_address_til"
+                style="@style/Vector.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_address"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/phone_number" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_number_til"
+                style="@style/Vector.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_number"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/shi_number" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shi_til"
+                style="@style/Vector.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/shi"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/shi_number"
+                    android:imeOptions="actionNext"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/service_type" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/service_type_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/service_type"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/service_type"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/highrisktype" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/highRiskGroup_type_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/highRiskGroup_type"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/highrisktype"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:text="@string/permanent_residency"
+                android:textColor="@color/text_color_primary_title"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/province" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/perm_province_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/perm_province"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/province"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/district" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/perm_district_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/perm_district"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/district"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/commune" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/perm_commune_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_asterisk"
+                app:startIconTint="@color/vector_warning_color">
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/perm_commune"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/commune"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CommonTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/street_address" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/perm_street_address_til"
+                style="@style/Vector.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/perm_street_address"
+                    style="@style/CommonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/street_address"
+                    android:imeOptions="actionNext"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/chk_same_address"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/same_address"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/cur_address_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/CommonTextTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/current_residency"
+                    android:textColor="@color/text_color_primary_title"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/province" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cur_province_til"
+                    style="@style/Vector.DropDownLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_asterisk"
+                    app:startIconTint="@color/vector_warning_color">
+
+                    <im.vector.app.ext.custom.ExposedDropdownMenu
+                        android:id="@+id/cur_province"
+                        style="@style/CommonTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/province"
+                        android:imeOptions="actionDone"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/district" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cur_district_til"
+                    style="@style/Vector.DropDownLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_asterisk"
+                    app:startIconTint="@color/vector_warning_color">
+
+                    <im.vector.app.ext.custom.ExposedDropdownMenu
+                        android:id="@+id/cur_district"
+                        style="@style/CommonTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/district"
+                        android:imeOptions="actionDone"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/commune" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cur_commune_til"
+                    style="@style/Vector.DropDownLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_asterisk"
+                    app:startIconTint="@color/vector_warning_color">
+
+                    <im.vector.app.ext.custom.ExposedDropdownMenu
+                        android:id="@+id/cur_commune"
+                        style="@style/CommonTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/commune"
+                        android:imeOptions="actionDone"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CommonTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/street_address" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cur_street_address_til"
+                    style="@style/Vector.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cur_street_address"
+                        style="@style/CommonTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/street_address"
+                        android:imeOptions="actionDone"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/nextButton"
+                style="@style/VectorButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/next" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

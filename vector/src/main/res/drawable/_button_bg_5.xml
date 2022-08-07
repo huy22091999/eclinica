@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="8dp" />
+    <solid android:color="@color/white"
+        />
+    <gradient android:startColor="@color/riot_background"
+        android:angle="270"
+        />
+    <stroke
+        android:width="0.7dp"
+        android:color="@color/default_text_hint_color_dark"
+        android:dashWidth="5dp"
+        android:dashGap="5dp" />
+</shape>

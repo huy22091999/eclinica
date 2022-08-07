@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riot_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/layout_horizontal_margin"
+        android:orientation="vertical"
+        android:paddingBottom="36dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/content"
+            style="@style/QuicksandMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="7dp"
+            android:text="@string/client_consent_form"
+            android:textSize="16sp"
+            android:textColor="?riot_primary_text_color"
+            app:fontFamily="@font/quicksand_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:justificationMode="inter_word"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/chk_client_concur"
+            style="@style/QuicksandSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_vertical_margin"
+            android:text="Tôi xác nhận đồng ý với các điểm nêu trên"
+            android:textSize="15sp"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

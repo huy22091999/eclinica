@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riot_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_encouter_notifi"
+        style="@style/QuicksandMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="20dp"
+        android:text="@string/encounter_notrequire"
+        android:textColor="@color/riotx_accent"
+        android:visibility="invisible" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/encounter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <DatePicker
+                android:id="@+id/dp_appointment"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:calendarTextColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:theme="@style/VectorCalender"
+                android:datePickerMode="calendar"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/encounter_slot_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/riot_primary_background_color_light"
+                app:hintEnabled="true"
+                android:hint="@string/encounter_slot"
+               >
+
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/encounter_slot"
+                    style="@style/CommonTextInputLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/appointment_place_til"
+                style="@style/Vector.DropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/riot_primary_background_color_light"
+                app:hintEnabled="true"
+                android:layout_marginTop="24dp"
+                android:hint="@string/appointment_place"
+                >
+                <im.vector.app.ext.custom.ExposedDropdownMenu
+                    android:id="@+id/appointment_place"
+                    style="@style/CommonTextInputLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_appointment"
+                style="@style/VectorButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:paddingVertical="14dp"
+                android:text="@string/make_appointment_title"
+                android:textAllCaps="false"
+                app:icon="@drawable/ic_calendar_mini"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/voice_call"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Voice Call"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_call"
+        app:iconTint="@color/accent_color_light"
+        app:iconTintMode="screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/video_call"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Video Call"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_call_video_small"
+        app:iconTint="@color/accent_color_light"
+        app:iconTintMode="screen"
+        app:layout_constraintStart_toEndOf="@id/voice_call"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/chat"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Chat"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_fab_add_chat"
+        app:iconTint="@color/accent_color_light"
+        app:iconTintMode="screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voice_call"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="118dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

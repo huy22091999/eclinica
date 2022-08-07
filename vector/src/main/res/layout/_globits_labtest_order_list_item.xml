@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="16dp"
+    android:background="@color/riot_background"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_edit_text"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_labtest"
+                style="@style/LabelLaboratoryItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_labtest"
+                android:textColor="@color/eclinica_text_color_black"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/layout_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/line_login" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LabelItem"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/over_view" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/temperature" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/circuit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/temperature_number" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/circuit_number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/blood_pressure_min" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/blood_pressure_max" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/blood_pressure_number" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/circuit_number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/breathing" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/weight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/breathing_number" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/weight_number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/height" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/motion" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/height_number" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/sfprotext_semibold"
+                        android:gravity="end"
+                        android:text="@string/motion_example"
+                        android:textColor="#F4A261" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="@string/person_perform" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:gravity="end"
+                        android:text="@string/person_accept" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        app:fontFamily="@font/sfprotext_semibold"
+                        android:textColor="@color/riot_orange_eclinica"
+                        android:text="@string/normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/ContentCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/sfprotext_semibold"
+                        android:gravity="end"
+                        android:text="@string/cancel"
+                        android:textColor="@color/riot_orange_eclinica" />
+                </LinearLayout>
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/LabelItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/summary_prehistoric" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal" />
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:src="@drawable/line_login" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hidden"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_hidden_detail"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_up"
+                    android:layout_marginTop="20dp"
+                    style="@style/LoginLabel2"
+                    android:textColor="@color/riot_green_eclinica"
+                    android:drawablePadding="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/labtest_date"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/LabelContentCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_request" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/date_request"
+                        style="@style/LabelContentCounter"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textColor="#F4A261"
+                        android:text="27/07/2022"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tilte_request"
+                        style="@style/LabelContentCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_result" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/date_result"
+                        style="@style/LabelContentCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tilte_request"
+                        android:layout_marginTop="4dp"
+                        android:text="27/07/2022"
+                        android:textColor="@color/riot_green_eclinica"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btn_view_detail"
+                style="@style/LoginLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:drawableEnd="@drawable/ic_baseline_arrow_down"
+                android:drawablePadding="8dp"
+                android:text="@string/view_detail"
+                android:layout_gravity="center"
+                android:textColor="@color/riot_green_eclinica" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

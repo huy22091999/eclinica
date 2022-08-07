@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/CommonTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_vertical_margin"
+        android:paddingStart="20dp"
+        android:text="Xem trước file"
+        android:textColor="@color/text_color_primary_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/labtestfiledetail"
+        android:scaleType="fitXY"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/labtestfiledialog_cancle"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HỦY"
+        android:backgroundTint="#ef4949"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText"></com.google.android.material.button.MaterialButton>
+
+
+
+
+</LinearLayout>

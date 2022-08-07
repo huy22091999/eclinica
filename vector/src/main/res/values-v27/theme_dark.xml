@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Dark.v27" parent="AppTheme.Dark.v23">
+<!--        <item name="android:windowLightNavigationBar">false</item>-->
+        <item name="android:navigationBarColor">@color/riotx_header_panel_background_light</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="AppTheme.Dark.v27" />
+
+</resources>

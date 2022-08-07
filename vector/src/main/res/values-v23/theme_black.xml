@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Black.v23" parent="AppTheme.Base.Black">
+<!--        <item name="android:windowLightStatusBar">false</item>-->
+        <item name="android:statusBarColor">@color/riotx_header_panel_background_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.Black" parent="AppTheme.Black.v23"/>
+
+</resources>
